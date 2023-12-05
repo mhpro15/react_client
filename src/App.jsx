@@ -38,10 +38,8 @@ export default App
 
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { ThemeProvider } from '@material-ui/styles';
 import MainRouter from '../MainRouter';
 import Navbar from '../core/Navbar';
-import theme from '../theme';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 //import { hot } from 'react-hot-loader'
 
@@ -49,9 +47,7 @@ const App = () => {
   return (
     <Router>
       <Navbar />
-      <ThemeProvider theme={theme}>
         <MainRouter />
-      </ThemeProvider>
     </Router>
   );
 };

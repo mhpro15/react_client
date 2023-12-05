@@ -14,7 +14,6 @@ export const withRouter = (Component) =>{
     } 
     return Wrapper;
 }
-import Button from '@material-ui/core/Button'
 
 import auth from '../auth/auth-helper'
 
@@ -98,24 +97,24 @@ return (
               {
         !auth.isAuthenticated() && (<span>
           <Link to="/signup">
-            <Button style={{"color":"white"}}>Sign up
-            </Button>
+            <button style={{"color":"white"}}>Sign up
+            </button>
           </Link>
           <Link to="/login">
-            <Button style={{"color":"white"}}>Sign In
-            </Button>
+            <button style={{"color":"white"}}>Sign In
+            </button>
           </Link>
         </span>)
       }
       {
         auth.isAuthenticated() && (<span>
-            <Button style={{"color":"white"}}  onClick={()=>navigate("/update")}>{values.name}</Button>
-            <Link to="/"><Button style={{"color":"white"}} onClick={() => {
+            <button style={{"color":"white"}}  onClick={()=>navigate("/update")}>{values.name}</button>
+            <Link to="/"><button style={{"color":"white"}} onClick={() => {
               auth.clearJWT(()=>{
                 <Navigate to="/"/>
                 // navigate(0)
               })
-            }}>Sign out</Button></Link>
+            }}>Sign out</button></Link>
         </span>)
       }
               <form className="form-inline">
