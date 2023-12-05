@@ -23,7 +23,6 @@ import './css/bootstrap.css'
 import './css/responsive.css'
 import './css/style.css'
 import './css/style.scss'
-import user from '../../server/models/user';
 
 
 export default function Navbar(){ 
